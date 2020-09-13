@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Purchase">
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cash on delivery"
+        android:layout_below="@+id/imageView5"
+        android:textSize="24dp"
+        android:textColor="#4FA6DC"
+        android:layout_marginLeft="20dp"
+
+        />
+
+    <TextView
+        android:id="@+id/payvia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pay via"
+        android:layout_below="@+id/cv"
+        android:layout_marginLeft="20dp"
+        android:textSize="24dp"
+        android:textColor="#4FA6DC"
+        />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        app:srcCompat="@drawable/wave"
+        android:layout_below="@+id/payvia"
+        android:layout_toRightOf="@+id/imageView5"
+        android:layout_marginLeft="13dp"
+
+        />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        app:srcCompat="@drawable/mpu"
+        android:layout_below="@+id/payvia"
+        android:layout_toRightOf="@+id/imageView4"
+        android:layout_marginLeft="10dp"
+       />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        app:srcCompat="@drawable/visalogo"
+        android:layout_below="@+id/payvia"
+
+        android:layout_marginLeft="15dp"
+
+        />
+    <Button
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="Order"
+        android:background="@drawable/buttonbackground"
+        android:textColor="#FFFFFF"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+      android:layout_margin="30dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="158dp"
+        android:elevation="3dp">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/voucher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:text="Voucher"
+        android:textColor="#4FA6DC"
+        android:textSize="18dp"/>
+        <TextView
+            android:id="@+id/prc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:padding="10dp"
+
+            android:layout_below="@+id/voucher"
+            />
+
+        <TextView
+
+            android:id="@+id/deli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Deliver Fee"
+            android:padding="10dp"
+     android:layout_below="@+id/prc"
+           />
+
+
+        <TextView
+            android:id="@+id/tax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tax"
+            android:padding="10dp"
+            android:layout_below="@+id/deli"
+
+            />
+
+        <TextView
+            android:id="@+id/tot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total"
+            android:padding="10dp"
+            android:layout_below="@+id/tax"
+            />
+</RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
