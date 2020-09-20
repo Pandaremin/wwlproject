@@ -1,5 +1,6 @@
 package com.example.wwlproject;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ProgressBar;
@@ -27,7 +28,9 @@ public class Home extends AppCompatActivity {
     TextView search;
     String[] item;
     SearchView searchView;
-
+    SharedPreferences sharedPreferences;
+    private static final String SHARED_REF_KEY="mypref";
+    private static final String KEY_TOKEN="Token";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,7 @@ searchView=findViewById(R.id.searchView2);
         RecyclerView.LayoutManager layoutManager  = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
+        sharedPreferences=getSharedPreferences(SHARED_REF_KEY,MODE_PRIVATE);
         fetchContact("users", "");
         CharSequence queryHint = searchView.getQueryHint();
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -87,6 +91,7 @@ searchView=findViewById(R.id.searchView2);
                 adapter = new Adapter(products, Home.this);
                 recyclerView.setAdapter(adapter);
                 adapter.notifyDataSetChanged();
+
             }
 
             @Override

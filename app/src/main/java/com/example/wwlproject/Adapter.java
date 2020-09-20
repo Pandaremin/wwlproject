@@ -37,6 +37,8 @@ public class  Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> impleme
         holder.name.setText(products.get(position).getName());
         holder.description.setText(products.get(position).getDescription());
         holder.price.setText(products.get(position).getPrice());
+
+
         holder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,7 +46,7 @@ public class  Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> impleme
                 intent5.putExtra("name",products.get(position).getName());
                 intent5.putExtra("description",products.get(position).getDescription());
                 intent5.putExtra("price",products.get(position).getPrice().toString());
-                intent5.putExtra("imageurl",products.get(position).getImageurl());
+                intent5.putExtra("imageurl",products.get(position).getImage());
                 context.startActivity(intent5);
             }
         });
@@ -67,8 +69,9 @@ public class  Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> impleme
         public MyViewHolder(View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.name);
-            price=itemView.findViewById(R.id.price);
             description = itemView.findViewById(R.id.description);
+            price = itemView.findViewById(R.id.price);
+
             parentLayout = itemView.findViewById(R.id.parent_layout);
         }
     }

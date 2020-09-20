@@ -1,6 +1,7 @@
 package com.example.wwlproject;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -17,6 +18,9 @@ import retrofit2.Response;
 public class Login extends AppCompatActivity {
     ApiInterface apiInterface;
 EditText etUser,etPass;
+SharedPreferences sharedPreferences;
+private static final String SHARED_REF_KEY="mypref";
+    private static final String KEY_TOKEN="Token";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,7 +29,7 @@ EditText etUser,etPass;
 
         etUser = findViewById(R.id.etUser);
         etPass = findViewById(R.id.etPass);
-
+sharedPreferences=getSharedPreferences(SHARED_REF_KEY,MODE_PRIVATE);
     }
 
     public void loginUser(View v){
@@ -51,8 +55,12 @@ EditText etUser,etPass;
 
                     if(usermodel.getSuccess())
                     {
+                        SharedPreferences.Editor editor=sharedPreferences.edit();
+                        editor.putString(KEY_TOKEN,usermodel.getToken());
+                        editor.apply();
                         Intent intent1=new Intent(Login.this,Home.class);
                         startActivity(intent1);
+                        finish();
                     }
                     else
                     {

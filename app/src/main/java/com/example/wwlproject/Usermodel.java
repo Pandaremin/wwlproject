@@ -9,12 +9,12 @@ public class Usermodel {
     private String email ;
 
     @Expose
-    @SerializedName("username")
-    private String username ;
+    @SerializedName("name")
+    private String name ;
 
     @Expose
-    @SerializedName("phone")
-    private String phone;
+    @SerializedName("phone_number")
+    private String phone_number;
 
     @Expose
     @SerializedName("password")
@@ -29,6 +29,15 @@ public class Usermodel {
     private String message;
 
 
+    @Expose
+    @SerializedName("address")
+    private String address;
+
+    @Expose
+    @SerializedName("token")
+    private String token;
+
+
     public String getEmail() {
         return email;
     }
@@ -38,19 +47,19 @@ public class Usermodel {
     }
 
     public String getUsername() {
-        return username;
+        return name;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUsername(String name) {
+        this.name = name;
     }
 
     public String getPhone() {
-        return phone;
+        return phone_number;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setPhone(String phone_number) {
+        this.phone_number = phone_number;
     }
 
     public String getPassword() {
@@ -75,5 +84,21 @@ public class Usermodel {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 }

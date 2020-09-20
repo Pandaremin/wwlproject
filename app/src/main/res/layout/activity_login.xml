@@ -36,10 +36,9 @@
         android:layout_marginEnd="32dp"
 
 
-
         android:hint="Username"
         android:inputType="textPersonName"
-        android:padding="16dp"
+
         android:textColor="#4FA6DC"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,16 +49,18 @@
         android:layout_width="253dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
+        android:layout_marginStart="32dp"
         android:ems="10"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="32dp"
         android:hint="Password"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:textColor="#4FA6DC"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etUser"
 
-        />
+        android:layout_marginRight="32dp" />
 
     <Button
         android:id="@+id/btnLogin"
@@ -98,17 +99,6 @@
         app:layout_constraintTop_toBottomOf="@+id/btnLogin"
         app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/person" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="243dp"
@@ -120,8 +110,6 @@
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

@@ -47,7 +47,8 @@
         android:layout_height="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardBackgroundColor="@color/colorPrimary">
        <androidx.appcompat.widget.SearchView
            android:layout_width="match_parent"
            android:layout_height="match_parent"
@@ -57,5 +58,6 @@
            android:padding="10dp"
            app:queryHint="Search Here" />
     </androidx.cardview.widget.CardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

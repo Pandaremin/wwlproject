@@ -8,29 +8,29 @@ import com.google.gson.annotations.SerializedName;
 
 public class Product {
 
-    @SerializedName("id") private int Id;
-    @SerializedName("name") private String Name;
-    @SerializedName("price") private String Price;
-    @SerializedName("imageurl") private String Imageurl;
+    @SerializedName("id") private int id;
+    @SerializedName("name") private String name;
+    @SerializedName("price") private String price;
+    @SerializedName("image_name") private String image_name;
 
-    @SerializedName("description") private String Description;
+    @SerializedName("description") private String description;
     public int getId() {
-        return Id;
+        return id;
     }
 
-    public String getImageurl() {
-        return Imageurl;
+    public String getImage() {
+        return image_name;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public String getPrice() {
-        return Price;
+        return price;
     }
     public String getDescription() {
-        return Description;
+        return description;
     }
 //
 //    public String getImage() {

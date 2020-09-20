@@ -13,16 +13,16 @@ import retrofit2.http.Query;
 
 public interface ApiInterface {
 
-    @GET("getcontacts.php")
+    @POST("product")
     Call<List<Product>> getContact(
             @Query("item_type") String item_type,
             @Query("key") String keyword
     );
     @FormUrlEncoded
-    @POST("loginuser.php")
+    @POST("login")
     Call<Usermodel> loginUser(@Field("email") String email, @Field("password") String password);
 
     @FormUrlEncoded
-    @POST("registeruser.php")
-    Call<Usermodel> registerUser(@Field("email") String email, @Field("password") String password, @Field("username") String username, @Field("phone") String phone);
+    @POST("register")
+    Call<Usermodel> registerUser(@Field("name") String name,@Field("email") String email, @Field("phone_number") String phone_number, @Field("password") String password,  @Field("address") String address);
 }
