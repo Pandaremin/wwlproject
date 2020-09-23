@@ -30,8 +30,7 @@ public class Signup extends AppCompatActivity {
         apiInterface= ApiClient.getApiClient().create(ApiInterface.class);
     }
     public void registerUser(View v){
-        Call<Usermodel> callRegister = apiInterface.registerUser(editTextEmail.getText().toString(),editTextPassword.getText().toString(),
-                editTextUsername.getText().toString(), editTextPhone.getText().toString(), editTextAddress.getText().toString());
+        Call<Usermodel> callRegister = apiInterface.registerUser( editTextUsername.getText().toString(),editTextEmail.getText().toString(),editTextPassword.getText().toString(), editTextPhone.getText().toString(), editTextAddress.getText().toString());
         callRegister.enqueue(new Callback<Usermodel>() {
             @Override
             public void onResponse(Call<Usermodel> call, Response<Usermodel> response) {
@@ -42,9 +41,7 @@ public class Signup extends AppCompatActivity {
                     if(usermodel.getSuccess())
                     {
                         Toast.makeText(Signup.this,"User registration successful!",Toast.LENGTH_SHORT).show();
-                        Intent i1=new Intent(Signup.this,Login.class);
-                        startActivity(i1);
-                        finish();
+
                     }
                     else
                     {
@@ -55,7 +52,7 @@ public class Signup extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<Usermodel> call, Throwable t) {
-                Toast.makeText(Signup.this,"Error occured"+t.getMessage(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(Signup.this,"Error occured",Toast.LENGTH_SHORT).show();
             }
         });
     }

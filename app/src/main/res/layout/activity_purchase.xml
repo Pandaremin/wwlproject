@@ -68,6 +68,7 @@
         android:text="Order"
         android:background="@drawable/buttonbackground"
         android:textColor="#FFFFFF"
+        android:onClick="order"
         />
 
     <androidx.cardview.widget.CardView
@@ -130,6 +131,44 @@
             android:padding="10dp"
             android:layout_below="@+id/tax"
             />
+
+    <TextView
+        android:id="@+id/textViewid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="31"
+
+        />
+
+    <TextView
+        android:id="@+id/textViewname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zolendronic Acid" />
+
+    <TextView
+        android:id="@+id/textViewprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5000" />
+
+    <TextView
+        android:id="@+id/textViewquantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10" />
+
+    <TextView
+        android:id="@+id/textViewtax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100" />
+
+    <TextView
+        android:id="@+id/textViewdeliveryfee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100" />
 </RelativeLayout>
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

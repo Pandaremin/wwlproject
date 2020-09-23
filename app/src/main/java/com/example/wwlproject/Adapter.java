@@ -15,11 +15,11 @@ import java.util.List;
 
 public class  Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> implements View.OnClickListener {
 
-    private List<Product> products;
+    private List<ProductValue> products;
     private Context context;
     private RecyclerViewClickListener listener;
 
-    public Adapter(List<Product> products, Context context ) {
+    public Adapter(List<ProductValue> products, Context context ) {
         this.products = products;
         this.context = context;
 
@@ -43,10 +43,10 @@ public class  Adapter extends RecyclerView.Adapter<Adapter.MyViewHolder> impleme
             @Override
             public void onClick(View view) {
                 Intent intent5 = new Intent(context, Order.class);
-                intent5.putExtra("name",products.get(position).getName());
-                intent5.putExtra("description",products.get(position).getDescription());
-                intent5.putExtra("price",products.get(position).getPrice().toString());
-                intent5.putExtra("imageurl",products.get(position).getImage());
+//                intent5.putExtra("name",products.get(position).getName());
+//                intent5.putExtra("description",products.get(position).getDescription());
+//                intent5.putExtra("price",products.get(position).getPrice().toString());
+//                intent5.putExtra("imageurl",products.get(position).getImage());
                 context.startActivity(intent5);
             }
         });
