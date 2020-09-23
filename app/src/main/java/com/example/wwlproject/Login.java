@@ -58,7 +58,7 @@ sharedPreferences=getSharedPreferences(SHARED_REF_KEY,MODE_PRIVATE);
                         SharedPreferences.Editor editor=sharedPreferences.edit();
                         editor.putString(KEY_TOKEN,usermodel.getToken());
                         editor.apply();
-                        Intent intent1=new Intent(Login.this,Purchase.class);
+                        Intent intent1=new Intent(Login.this,Home.class);
                         startActivity(intent1);
                         finish();
                     }

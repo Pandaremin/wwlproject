@@ -14,7 +14,7 @@ import retrofit2.http.Query;
 public interface ApiInterface {
 
     @POST("product")
-    Call<List<Product>> getProduct(
+    Call<Product> getProduct(
 
     );
     @FormUrlEncoded
@@ -27,5 +27,5 @@ public interface ApiInterface {
 
     @FormUrlEncoded
     @POST("oderitems")
-    Call<ProductValue> purchase(@Field("product_id") int product_id,@Field("order_quantity") int order_quantity,@Field("price") int price,@Field("total_amount") int total_amount,@Field("delivery_fee") int delivery_fee,@Field("tax") int tax,@Field("user_id") int user_id);
+    Call<ProductValue> purchase(@Field("product_id") int product_id,@Field("order_quantity") String order_quantity,@Field("price") String price,@Field("total_amount") String total_amount,@Field("delivery_fee") String delivery_fee,@Field("tax") String tax,@Field("user_id") int user_id);
 }

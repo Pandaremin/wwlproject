@@ -3,9 +3,7 @@ package com.example.wwlproject;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-/**
- * Created by haerul on 17/03/18.
- */
+
 
 public class ProductValue {
 
@@ -16,7 +14,7 @@ public class ProductValue {
     @Expose
     @SerializedName("name") private String name;
     @Expose
-    @SerializedName("price") private int price;
+    @SerializedName("price") private String price;
     @Expose
     @SerializedName("image_name") private String image_name;
     @Expose
@@ -27,17 +25,17 @@ public class ProductValue {
     @Expose
     @SerializedName("quantity") private int quantity;
     @Expose
-    @SerializedName("delivery_fee") private int delivery_fee;
+    @SerializedName("delivery_fee") private String delivery_fee;
     @Expose
-    @SerializedName("tax") private int tax;
+    @SerializedName("tax") private String tax;
     @Expose
-    @SerializedName("total_amount") private int total_amount;
+    @SerializedName("total_amount") private String total_amount;
 
-    public int getTotal_amount() {
+    public String getTotal_amount() {
         return total_amount;
     }
 
-    public void setTotal_amount(int total_amount) {
+    public void setTotal_amount(String total_amount) {
         this.total_amount = total_amount;
     }
 
@@ -80,11 +78,11 @@ public class ProductValue {
         this.name = name;
     }
 
-    public int getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
@@ -120,41 +118,21 @@ public class ProductValue {
         this.quantity = quantity;
     }
 
-    public int getDelivery_fee() {
+    public String getDelivery_fee() {
         return delivery_fee;
     }
 
-    public void setDelivery_fee(int delivery_fee) {
+    public void setDelivery_fee(String delivery_fee) {
         this.delivery_fee = delivery_fee;
     }
 
-    public int getTax() {
+    public String getTax() {
         return tax;
     }
 
-    public void setTax(int tax) {
+    public void setTax(String tax) {
         this.tax = tax;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     //
 //    public String getImage() {
 //        return Image;
