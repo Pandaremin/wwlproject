@@ -19,13 +19,19 @@ public interface ApiInterface {
     );
     @FormUrlEncoded
     @POST("login")
-    Call<Usermodel> loginUser(@Field("email") String email, @Field("password") String password);
+    Call<User> loginUser(@Field("email") String email, @Field("password") String password);
 
     @FormUrlEncoded
     @POST("register")
-    Call<Usermodel> registerUser(@Field("name") String name,@Field("email") String email, @Field("phone_number") String phone_number, @Field("password") String password,  @Field("address") String address);
+    Call<User> registerUser(@Field("name") String name,@Field("email") String email, @Field("phone_number") String phone_number, @Field("password") String password,  @Field("address") String address);
 
     @FormUrlEncoded
-    @POST("oderitems")
-    Call<ProductValue> purchase(@Field("product_id") int product_id,@Field("order_quantity") String order_quantity,@Field("price") String price,@Field("total_amount") String total_amount,@Field("delivery_fee") String delivery_fee,@Field("tax") String tax,@Field("user_id") int user_id);
+    @POST("orderitems")
+    Call<PurchaseModel> purchase(@Field("product_id") int product_id,
+                                 @Field("order_quantity") String order_quantity,
+                                 @Field("price") String price,
+                                 @Field("total_amount") String total_amount,
+                                 @Field("delivery_fee") String delivery_fee,
+                                 @Field("tax") String tax,
+                                 @Field("user_email") String user_email);
 }

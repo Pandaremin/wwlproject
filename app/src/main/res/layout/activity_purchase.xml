@@ -1,174 +1,227 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Purchase">
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cash on delivery"
-        android:layout_below="@+id/imageView5"
-        android:textSize="24dp"
-        android:textColor="#4FA6DC"
-        android:layout_marginLeft="20dp"
 
-        />
 
-    <TextView
-        android:id="@+id/payvia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Pay via"
-        android:layout_below="@+id/cv"
-        android:layout_marginLeft="20dp"
-        android:textSize="24dp"
-        android:textColor="#4FA6DC"
-        />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="100dp"
-        android:layout_height="120dp"
-        app:srcCompat="@drawable/wave"
-        android:layout_below="@+id/payvia"
-        android:layout_toRightOf="@+id/imageView5"
-        android:layout_marginLeft="13dp"
-
-        />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="100dp"
-        android:layout_height="120dp"
-        app:srcCompat="@drawable/mpu"
-        android:layout_below="@+id/payvia"
-        android:layout_toRightOf="@+id/imageView4"
-        android:layout_marginLeft="10dp"
-       />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="100dp"
-        android:layout_height="120dp"
-        app:srcCompat="@drawable/visalogo"
-        android:layout_below="@+id/payvia"
-
-        android:layout_marginLeft="15dp"
-
-        />
-    <Button
-        android:layout_width="240dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView4"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
-        android:text="Order"
-        android:background="@drawable/buttonbackground"
-        android:textColor="#FFFFFF"
-        android:onClick="order"
-        />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cv"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="230dp"
-      android:layout_margin="30dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="158dp"
-        android:elevation="3dp">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
-    <TextView
-        android:id="@+id/voucher"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:padding="10dp"
-        android:text="Voucher"
-        android:textColor="#4FA6DC"
-        android:textSize="18dp"/>
-        <TextView
-            android:id="@+id/prc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Price"
-            android:padding="10dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-            android:layout_below="@+id/voucher"
-            />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:elevation="3dp"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-            android:id="@+id/deli"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Deliver Fee"
-            android:padding="10dp"
-     android:layout_below="@+id/prc"
-           />
+                    <TextView
+                        android:id="@+id/voucher"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:padding="10dp"
+                        android:text="Voucher"
+                        android:textColor="#4FA6DC"
+                        android:textSize="18dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
 
-        <TextView
-            android:id="@+id/tax"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Tax"
-            android:padding="10dp"
-            android:layout_below="@+id/deli"
+                    <TextView
+                        android:id="@+id/prc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
 
-            />
 
-        <TextView
-            android:id="@+id/tot"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Total"
-            android:padding="10dp"
-            android:layout_below="@+id/tax"
-            />
+                        android:padding="10dp"
+                        android:text="Price"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/voucher" />
 
-    <TextView
-        android:id="@+id/textViewid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="31"
+                    <TextView
 
-        />
+                        android:id="@+id/deli"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Deliver Fee"
 
-    <TextView
-        android:id="@+id/textViewname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Zolendronic Acid" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/prc" />
 
-    <TextView
-        android:id="@+id/textViewprice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="5000" />
+                    <TextView
+                        android:id="@+id/tax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Tax"
 
-    <TextView
-        android:id="@+id/textViewquantity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="10" />
 
-    <TextView
-        android:id="@+id/textViewtax"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="100" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/deli" />
 
-    <TextView
-        android:id="@+id/textViewdeliveryfee"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="100" />
-</RelativeLayout>
-    </androidx.cardview.widget.CardView>
-</RelativeLayout>
+                    <TextView
+                        android:id="@+id/tot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Total"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tax" />
+
+                    <TextView
+                        android:id="@+id/prcm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:padding="10dp"
+                        android:text="1000"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/prc" />
+
+                    <TextView
+
+                        android:id="@+id/delim"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:padding="10dp"
+                        android:text="1000"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/prcm" />
+
+                    <TextView
+                        android:id="@+id/taxm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:padding="10dp"
+                        android:text="50"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/delim" />
+
+                    <TextView
+                        android:id="@+id/totm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:padding="10dp"
+                        android:text="1050"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/taxm" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/payvia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cv"
+                android:layout_marginTop="20dp"
+                android:text="Pay via"
+                android:textColor="#4FA6DC"
+                android:textSize="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.089"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cv" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_below="@+id/payvia"
+                android:layout_marginStart="28dp"
+                android:layout_marginLeft="28dp"
+
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@+id/imageView5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/payvia"
+                app:srcCompat="@drawable/wave" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_below="@+id/payvia"
+                android:layout_marginEnd="28dp"
+                android:layout_marginRight="28dp"
+                android:layout_toRightOf="@+id/imageView4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView4"
+                app:srcCompat="@drawable/mpu" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_below="@+id/payvia"
+                app:layout_constraintEnd_toStartOf="@+id/imageView5"
+
+                app:layout_constraintStart_toEndOf="@+id/imageView6"
+                app:layout_constraintTop_toTopOf="@+id/imageView6"
+                app:srcCompat="@drawable/visalogo" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="36dp"
+                android:background="@drawable/buttonbackground"
+                android:onClick="order"
+                android:text="Order"
+                android:textColor="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView5"
+                android:layout_marginTop="24dp"
+
+                android:text="Cash on delivery"
+                android:textColor="#4FA6DC"
+                android:textSize="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.146"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

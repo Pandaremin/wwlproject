@@ -11,6 +11,7 @@ public class ProductValue {
     @SerializedName("success") private boolean success;
     @Expose
     @SerializedName("id") private int id;
+
     @Expose
     @SerializedName("name") private String name;
     @Expose
@@ -31,6 +32,9 @@ public class ProductValue {
     @Expose
     @SerializedName("total_amount") private String total_amount;
 
+    @Expose
+    @SerializedName("product_id") private int product_id;
+
     public String getTotal_amount() {
         return total_amount;
     }
@@ -47,8 +51,7 @@ public class ProductValue {
         this.product_id = product_id;
     }
 
-    @Expose
-    @SerializedName("product_id") private int product_id;
+
 
     public boolean isSuccess() {
         return success;

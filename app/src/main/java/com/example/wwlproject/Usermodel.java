@@ -36,6 +36,18 @@ public class Usermodel {
     @Expose
     @SerializedName("token")
     private String token;
+    @Expose
+    @SerializedName("id")
+    private int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
 
 
     public String getEmail() {
