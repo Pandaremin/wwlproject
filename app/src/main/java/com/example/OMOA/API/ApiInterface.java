@@ -1,14 +1,14 @@
-package com.example.wwlproject;
+package com.example.OMOA.API;
 
 
-import java.util.List;
+import com.example.OMOA.Purchase.PurchaseModel;
+import com.example.OMOA.LoginRegister.User;
+import com.example.OMOA.Home.Product;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
-import retrofit2.http.GET;
 import retrofit2.http.POST;
-import retrofit2.http.Query;
 
 
 public interface ApiInterface {

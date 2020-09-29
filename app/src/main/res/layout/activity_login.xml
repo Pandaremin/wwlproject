@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login">
+    tools:context="com.example.OMOA.LoginRegister.Login">
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -14,7 +14,7 @@
             android:layout_height="match_parent">
 
     <View
-        android:id="@+id/view2"
+        android:id="@+id/curveView"
         android:layout_width="wrap_content"
         android:layout_height="100dp"
         android:background="@drawable/ic_wave"
@@ -37,19 +37,16 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="32dp"
-                android:layout_marginTop="20dp"
-
-
+                android:layout_marginTop="4dp"
                 android:layout_marginEnd="32dp"
-                android:hint="Username"
-
-                android:inputType="textPersonName"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
                 android:textColor="#4FA6DC"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.531"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/unf" />
-
-            <EditText
+                app:layout_constraintTop_toBottomOf="@+id/tvErrorMessage" />
+        <EditText
         android:id="@+id/etPass"
         android:layout_width="253dp"
         android:layout_height="wrap_content"
@@ -93,7 +90,7 @@
         android:layout_centerHorizontal="true"
 
         android:layout_marginTop="16dp"
-        android:onClick="text_click"
+        android:onClick="SignUP"
         android:text="New member?Sign Up!"
         android:textColor="@color/colorPrimary"
         android:textSize="18sp"
@@ -105,7 +102,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -119,19 +116,21 @@
         app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/unf"
+                android:id="@+id/tvErrorMessage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="48dp"
                 android:text="User not found!"
-                android:textColor="#B71C1C"
+                android:textColor="#FF0000"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:visibility="invisible"
+                
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintHorizontal_bias="0.287"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/view2" />
+                app:layout_constraintTop_toBottomOf="@+id/curveView"
+                 />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 

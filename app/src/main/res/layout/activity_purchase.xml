@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Purchase">
+    tools:context="com.example.OMOA.Purchase.Purchase">
 
 
     <androidx.core.widget.NestedScrollView
@@ -55,7 +55,7 @@
 
 
                     <TextView
-                        android:id="@+id/prc"
+                        android:id="@+id/tvPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
 
@@ -67,17 +67,17 @@
 
                     <TextView
 
-                        android:id="@+id/deli"
+                        android:id="@+id/tvDeli"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="10dp"
                         android:text="Deliver Fee"
 
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/prc" />
+                        app:layout_constraintTop_toBottomOf="@+id/tvPrice" />
 
                     <TextView
-                        android:id="@+id/tax"
+                        android:id="@+id/tvTax"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="10dp"
@@ -85,16 +85,16 @@
 
 
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/deli" />
+                        app:layout_constraintTop_toBottomOf="@+id/tvDeli" />
 
                     <TextView
-                        android:id="@+id/tot"
+                        android:id="@+id/tvTotal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="10dp"
                         android:text="Total"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tax" />
+                        app:layout_constraintTop_toBottomOf="@+id/tvTax" />
 
                     <TextView
                         android:id="@+id/prcm"
@@ -104,7 +104,7 @@
                         android:padding="10dp"
                         android:text="1000"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/prc" />
+                        app:layout_constraintTop_toTopOf="@+id/tvPrice" />
 
                     <TextView
 

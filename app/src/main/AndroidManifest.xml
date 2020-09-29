@@ -10,14 +10,14 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme1">
-        <activity android:name=".Home"
+        <activity android:name="com.example.OMOA.Home.Home"
             android:theme="@style/AppTheme"/>
-        <activity android:name=".Successful" />
-        <activity android:name=".Purchase" />
-        <activity android:name=".Order" />
-        <activity android:name=".Signup" />
-        <activity android:name=".Login" />
-        <activity android:name=".Splash">
+        <activity android:name="com.example.OMOA.Purchase.Successful" />
+        <activity android:name="com.example.OMOA.Purchase.Purchase" />
+        <activity android:name="com.example.OMOA.Order" />
+        <activity android:name="com.example.OMOA.LoginRegister.Signup" />
+        <activity android:name="com.example.OMOA.LoginRegister.Login" />
+        <activity android:name="com.example.OMOA.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

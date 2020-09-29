@@ -1,9 +1,7 @@
-package com.example.wwlproject;
+package com.example.OMOA.LoginRegister;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-
-import java.util.List;
 
 public class User {
     @Expose

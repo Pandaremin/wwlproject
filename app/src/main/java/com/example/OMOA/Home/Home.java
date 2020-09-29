@@ -1,4 +1,4 @@
-package com.example.wwlproject;
+package com.example.OMOA.Home;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -7,7 +7,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -15,6 +14,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.OMOA.API.ApiClient;
+import com.example.OMOA.API.ApiInterface;
+import com.example.OMOA.LoginRegister.Login;
+import com.example.wwlproject.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,22 +30,17 @@ import retrofit2.Response;
 public class Home extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-//    private List<Product> products;
     private Adapter adapter;
     ProgressBar progressBar;
-    TextView search;
-    String[] item;
+
     SearchView searchView;
     SharedPreferences sharedPreferences;
     private static final String SHARED_REF_KEY="mypref";
-//    private static final String KEY_TOKEN="Token";
-    private static final String USER_ID="USER_ID";
-    private static final String EMAIL="EMAIL";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-searchView=findViewById(R.id.searchView2);
+        searchView=findViewById(R.id.searchView);
         progressBar = findViewById(R.id.progress);
         recyclerView = findViewById(R.id.recyclerView);
         RecyclerView.LayoutManager layoutManager  = new LinearLayoutManager(this);
@@ -121,7 +120,7 @@ searchView=findViewById(R.id.searchView2);
         SharedPreferences.Editor editor=sharedPreferences.edit();
         editor.putString("Remember","false");
         editor.apply();
-        Intent intent9=new Intent(Home.this,Login.class);
+        Intent intent9=new Intent(Home.this, Login.class);
         startActivity(intent9);
         finish();
         return super.onOptionsItemSelected(item);

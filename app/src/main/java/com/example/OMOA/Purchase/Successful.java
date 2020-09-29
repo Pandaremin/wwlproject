@@ -1,8 +1,10 @@
-package com.example.wwlproject;
+package com.example.OMOA.Purchase;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.wwlproject.R;
 
 public class Successful extends AppCompatActivity {
 

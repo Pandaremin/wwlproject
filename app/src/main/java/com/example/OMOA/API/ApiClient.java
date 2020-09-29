@@ -1,4 +1,4 @@
-package com.example.wwlproject;
+package com.example.OMOA.API;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
